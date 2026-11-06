@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christian Life Community</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f8f5;
+  color: #333;
+}
+header {
+  background: #173d32;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+header h1 {
+  margin-bottom: 8px;
+}
+nav {
+  background: #b38b45;
+  padding: 15px;
+  text-align: center;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  font-weight: bold;
+}
+.hero {
+  background: linear-gradient(#0008,#0008),
+  url("https://images.unsplash.com/photo-1507692049790-de58290a4334?w=1200");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero h2 {
+  font-size: 35px;
+}
+button {
+  background: #b38b45;
+  color: white;
+  border: none;
+  padding: 13px 25px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+h2 {
+  color: #173d32;
+}
+.activities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.activity {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 230px;
+  box-shadow: 0 2px 6px #ddd;
+}
+form {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+footer {
+  background: #173d32;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>CHRISTIAN LIFE COMMUNITY</h1>
+<p>Faith • Fellowship • Service</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About Us</a>
+<a href="#activities">Activities</a>
+<a href="#join">Join CLC</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="hero" id="home">
+<h2>Welcome to Christian Life Community</h2>
+<p>Growing together in faith, love and service.</p>
+<button onclick="document.getElementById('join').scrollIntoView()">
+Join Our Community
+</button>
+</div>
+
+<section id="about">
+<h2>About Our Community</h2>
+<p>
+Christian Life Community is a Christian fellowship
+that brings people together to grow in faith,
+share God's love, pray and serve others.
+</p>
+
+<h3>Our Mission</h3>
+<p>To grow spiritually and spread the love of Christ.</p>
+
+<h3>Our Vision</h3>
+<p>To build a united community founded on faith, hope and love.</p>
+</section>
+
+<section id="activities">
+<h2>Our Activities</h2>
+<div class="activities">
+<div class="activity">
+<h3>🙏 Prayer Meetings</h3>
+<p>Coming together in prayer and worship.</p>
+</div>
+<div class="activity">
+<h3>📖 Bible Study</h3>
+<p>Learning and sharing God's word.</p>
+</div>
+<div class="activity">
+<h3>❤️ Community Service</h3>
+<p>Helping and supporting those in need.</p>
+</div>
+<div class="activity">
+<h3>🤝 Fellowship</h3>
+<p>Building friendship and unity.</p>
+</div>
+</div>
+</section>
+
+<section id="join">
+<h2>Become a CLC Member</h2>
+<p>Welcome! Fill in the form to express your interest in joining us.</p>
+
+<form id="memberForm">
+<input type="text" placeholder="Full Name" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<input type="email" placeholder="Email Address">
+
+<input type="text" placeholder="Location" required>
+
+<select required>
+<option value="">Select Age Group</option>
+<option>Below 18</option>
+<option>18–25</option>
+<option>26–35</option>
+<option>36–50</option>
+<option>Above 50</option>
+</select>
+
+<textarea placeholder="Why would you like to join CLC?" rows="4"></textarea>
+
+<button type="submit">Submit Membership Request</button>
+</form>
+
+<p id="message"></p>
+</section>
+
+<section id="contact">
+<h2>Contact CLC</h2>
+<p>Email: yourcommunity@email.com</p>
+<p>Phone: +254 700 000 000</p>
+<p>Location: Enter your community location</p>
+</section>
+
+<footer>
+<p>Christian Life Community</p>
+<p>Growing in Faith, Love and Service.</p>
+<p>© 2026 All Rights Reserved</p>
+</footer>
+
+<script>
+document.getElementById("memberForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  document.getElementById("message").innerText =
+    "Thank you for your interest in CLC! Please contact the community administrator to complete registration.";
+  this.reset();
+});
+</script>
+
+</body>
+</html>
